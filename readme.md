@@ -2,7 +2,7 @@ Put .sh file in your scripts/bin directory
 
 Put .sub file in your scripts/etc directory
 
-Alter the .sh file to point to your relevant notebook directory, and enable a conda environment that can run jupyter lab.
+Alter the .sh file to point to your relevant notebook directory, and enable a conda environment that can run jupyter lab (in our case we use config_ic.sh to do so).
 
 Alter the resources as needed within the .sub
 Create the appropriate output files described in the .sub file if you wish to see any output.
