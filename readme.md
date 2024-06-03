@@ -16,3 +16,4 @@ Do all these steps within the same terminal:
 4. Create a forwarding connection from the job node to the head node:
 `condor_ssh_to_job -ssh "ssh -gL PORT:localhost:PORT" JOB_ID`
 
+**Make sure to kill your notebooks after use!** Do so with `condor_rm JOB_ID`
