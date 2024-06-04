@@ -11,9 +11,10 @@ Do all these steps within the same terminal:
 1. Forward an ssh connection from your local node to the head node:
 `ssh -gL PORT:localhost:PORT USERNAME@noether.hep.manchester.ac.uk`
 2. Submit your jupyter notebook job as a normal batch job after you are happy with its settings.
-`condor_submit /scripts/etc/jupyter.sub`
-3. Once the job has started, find the job ID (`JOB_ID`) name with `condor_q`
-4. Create a forwarding connection from the job node to the head node:
+`cd scripts`
+`condor_submit etc/jupyter.sub`
+4. Once the job has started, find the job ID (`JOB_ID`) name with `condor_q`
+5. Create a forwarding connection from the job node to the head node:
 `condor_ssh_to_job -ssh "ssh -gL PORT:localhost:PORT" JOB_ID`
 
 **Make sure to kill your notebooks after use!** Do so with `condor_rm JOB_ID`
