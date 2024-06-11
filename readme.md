@@ -16,5 +16,6 @@ Do all these steps within the same terminal:
 4. Once the job has started, find the job ID (`JOB_ID`) name with `condor_q`
 5. Create a forwarding connection from the job node to the head node:
 `condor_ssh_to_job -ssh "ssh -gL PORT:localhost:PORT" JOB_ID`
-
+6. You can now connect to a jupyterlab session locally by typing in your browser:
+`localhost:PORT`
 **Make sure to kill your notebooks after use!** Do so with `condor_rm JOB_ID`
